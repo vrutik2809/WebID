@@ -1,0 +1,37 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cert: <http://www.w3.org/ns/auth/cert#> .
+@prefix rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<> a foaf:PersonalProfileDocument ;
+   foaf:maker <#this> ;
+   foaf:primaryTopic <#this> .
+
+# <> resolves to https://raw.githubusercontent.com/dbpedia/webid/master/example/webid_ex.ttl
+
+<#this> a foaf:Person ;
+   foaf:name "Vrutik Prajapati";
+   cert:key [
+        a cert:RSAPublicKey;
+        rdfs:label "test";
+        cert:modulus "DEC1B30EAC1F90EB3A40F6A0FC6F
+                        8BB25225141FC606F59C78A21C9D82
+                        64B14C4988C8A70391C75F5C20E44B
+                        54815B44306A646D5598C5995A898D
+                        B3DC53A77554EA307531278EA0A5AD
+                        53C21DA5781AEACBEC45F951404919
+                        9383AD29D344B97214F04E8BAB7F9F
+                        9F0D3A8B764786AC3911CD25089DA2
+                        D7CD1A62B65C3CF9E59F4B7D8D0DD3
+                        1C504E7345F71F161F233A24DA0EFB
+                        35DE67489C78B6979E4A00847AADE8
+                        E09216D58B8A32D0EDDD335164AF21
+                        544917DBCD80FBA683640B2F71B993
+                        4CA409D368D98BC716E5D8696D83A9
+                        F8B258ACCFEA3FC00E51FA8C1F9AAF
+                        5580B3C183BC73BEE70E7913D4BEA7
+                        73BFDC1CAE8480F1FB5D7A951795A8
+                        8141
+                        "^^xsd:hexBinary;
+        cert:exponent "65537"^^xsd:nonNegativeInteger
+    ] .
